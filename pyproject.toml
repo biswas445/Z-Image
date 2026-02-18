@@ -15,7 +15,10 @@ dependencies = [
     "loguru",
     "pillow",
     "accelerate",
-    "huggingface_hub>=0.25.0"
+    "huggingface_hub>=0.25.0",
+    "gradio>=4.44.0",
+    "fastapi>=0.115.0",
+    "uvicorn>=0.32.0"
 ]
 
 [project.optional-dependencies]
@@ -24,6 +27,9 @@ dev = [
     "isort",
     "ruff"
 ]
+
+[project.scripts]
+zimage-ui = "ui.app:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]
